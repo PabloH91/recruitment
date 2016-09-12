@@ -26,13 +26,16 @@ body {
 
 /* HEADER DIRECTIVE */
 hangar-songs-header header {
-    /*margin-top: 15px;*/
 }
 hangar-songs-header header h1 {
     text-align: center;
     font-weight: bold;
-    font-size: 50px;
-    margin-top: 30px;
+    font-size: 4.9vw;
+    margin: 30px auto 10px auto;
+}
+hangar-songs-header header h1 img {
+    width: 6%;
+    transform: translateY(-10%);
 }
 
 /* NAVIGATION DIRECTIVE */
@@ -320,6 +323,9 @@ hangar-songs-footer footer {
     overflow: hidden;
     width: 100%;
     border-top: 2px solid #0F1112;
+}
+hangar-songs-footer footer .centered {
+    text-align: center;
 }
 hangar-songs-footer footer .inter-footer-container {
     width: 80%;

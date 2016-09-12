@@ -13,8 +13,8 @@ General (Shared)
   ✔ Footer directive (desktop) @done (09-09-16 23:22)
   ✔ Change content of header/footer @done (10-09-16 00:13)
   ✔ Now Playing/Rate Songs buttons directive @critical @done (10-09-16 22:27)
-  ☐ mobile-friendly header @critical
-  ☐ mobile-friendly footer (and fix widths bug)  @critical
+  ✔ mobile-friendly header @critical @done (11-09-16 22:20)
+  ✔ mobile-friendly footer (and fix widths bug)  @critical @done (11-09-16 22:26)
 
 Login Page
   ✔ Login form template @done (10-09-16 10:42)
@@ -54,6 +54,6 @@ Now Playing Page
   ☐ Make progress bar draggable @high
 
 Others
-  ☐ Change json music @low
+  ✔ Change json music @low @done (11-09-16 21:42)
   ☐ 404 page? @low
   ☐ Gulp minification? @low

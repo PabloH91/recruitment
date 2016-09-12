@@ -27,9 +27,11 @@
                 if (containerElemWidth < copyrightElemWidth + contactElemWidth) {
                     copyrightElem.removeClass('pull-left');
                     contactElem.removeClass('pull-right');
+                    containerElem.addClass('centered');
                 } else {
                     copyrightElem.addClass('pull-left');
                     contactElem.addClass('pull-right');
+                    containerElem.removeClass('centered');
                 }
             }
             _checkFooterWidth();
