@@ -139,6 +139,7 @@ hangar-songs-navigation div.inner-navigation-container.larger-reso .navigation-b
     float: left;
     border-radius: 30px;
     margin: 10px;
+    cursor: pointer;
 }
 .login-container .social-login-container .social-login-icon.twitter-container {
     background-color: #1ebdef;
@@ -315,10 +316,12 @@ hangar-songs-navigation div.inner-navigation-container.larger-reso .navigation-b
 }
 .now-playing-container .player-btn-container i {
     padding: 17px 0;
+    cursor: pointer;
 }
 .now-playing-container .player-btn-container i.deactivated {
     color: #aaa;
     opacity: 0.8;
+    cursor: default;
 }
 .now-playing-container .player-btn-container .play-btn {
     transform: translateX(-50%);
