@@ -1,0 +1,36 @@
+<div class="album-cover-container">
+    <img data-ng-src="{{getAlbumCover()}}" 
+        alt="{{songsList[currentSongPosition.position].album.name}}"
+        title="{{songsList[currentSongPosition.position].album.name}}">
+</div>
+<div class="player-container">
+    <div class="progress-bar-container">
+        <div class="empty-audio-progress-bar">
+            <div class="filled-audio-progress-bar"
+                data-ng-style="{'width': (currentSong.progress * 100) + '%'}"></div>
+        </div>
+        <div class="audio-draggable-thumb"
+             data-ng-style="{'left': (currentSong.progress * 100) + '%'}"></div>
+    </div>
+</div>
+<div class="time-tracking-container">
+    <span>{{currentSong.currentTime | trackTimeStyle }}</span>
+    <span class="pull-right">-{{currentSong.remaining | trackTimeStyle }}</span>
+</div>
+<div class="song-info">
+    <span class="song-name">{{songsList[currentSongPosition.position].name}}</span>
+    <span class="artist-name">{{songsList[currentSongPosition.position].artists[0].name}}</span>
+</div>
+<div class="player-btn-container clearfix">
+    <i class="fa fa-3x fa-step-backward prev-btn" 
+        data-ng-click="currentSongPosition.isFirst || prevSong();"
+        data-ng-disabled="currentSongPosition.isFirst"
+        data-ng-class="{'deactivated': currentSongPosition.isFirst}"></i>
+    <i class="fa fa-3x play-btn fa-play"
+        data-ng-click="currentSong.paused ? currentSong.play() : currentSong.pause()"
+        data-ng-class="{'fa-play': currentSong.paused, 'fa-pause': !currentSong.paused}"></i>
+    <i class="fa fa-3x fa-step-forward next-btn"
+        data-ng-click="currentSongPosition.isLast || nextSong();"
+        data-ng-disabled="currentSongPosition.isLast"
+        data-ng-class="{'deactivated': currentSongPosition.isLast}"></i>
+</div>

@@ -1,0 +1,33 @@
+<hangar-songs-navigation></hangar-songs-navigation>
+<div class="music-list-container">
+    <div class="search-container">
+        <input class="music-search" type="text" 
+            ng-model="musicListCtrl.searchQuery"
+            placeholder="Search Music">
+        <i class="music-search-icon fa fa-2x fa-search"></i>
+    </div>
+    <div class="songs-container">
+        <div class="song-container" 
+            data-ng-repeat="song in musicListCtrl.musicServiceData.musicList | filter: musicListCtrl.searchForMusic"
+            data-ng-class-odd="'odd'"
+            data-ng-class-even="'even'">
+            <i class="fa fa-play play-btn pull-left"></i>
+            <div class="song-info-container">
+                <span class="song-name capitalize">{{song.songname}}</span>
+                <span class="artist-name capitalize">{{song.artistname}}</span>
+            </div>
+            <div class="date-btn-container pull-right">
+                <button class="today-btn" 
+                    data-ng-click="musicListCtrl.setDateSelection(song, 'today')"
+                    data-ng-class="{'active': song.dateSelection === 'today'}">
+                    Today
+                </button>
+                <button class="friday-btn" 
+                    data-ng-click="musicListCtrl.setDateSelection(song, 'friday')"
+                    data-ng-class="{'active': song.dateSelection === 'friday'}">
+                    Friday
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

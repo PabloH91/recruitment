@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="hangarSongs">
+<head>
+    <!-- METADATA -->
+    <meta charset="utf-8">
+    <title>Hangar O'Clock Songs</title>
+    <meta name="description" content="Web app built as a technical test during application to work at Hangar CR.">
+    <meta name="author" content="Pablo Hernandez">
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="content/css/normalize.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="content/css/hangarSongs.css">
+
+    <!-- FAVICON -->
+    <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+</head>
+<body>
+    <!-- header directive -->
+    <hangar-songs-header></hangar-songs-header>
+
+    <!-- main content -->
+    <div class="" data-ng-view></div>
+
+    <!-- footer directive -->
+    <hangar-songs-footer></hangar-songs-footer>
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="node_modules/angular-spotify/dist/angular-spotify.min.js"></script>
+    <script src="scripts/angular.audio.js"></script>
+
+    <!-- APP SCRIPTS -->
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+    <!-- REPOSITORIES -->
+    <script src="app/shared/repositories/music.repository.js"></script>
+    <!-- SERVICES -->
+    <script src="app/shared/services/music.service.js"></script>
+    <!-- CONTROLLERS -->
+    <script src="app/modules/login/login.controller.js"></script>
+    <script src="app/modules/musicList/musicList.controller.js"></script>
+    <script src="app/modules/nowPlaying/nowPlaying.controller.js"></script>
+    <!-- DIRECTIVES -->
+    <script src="app/shared/directives/hangarSongsFooter/hangarSongsFooter.directive.js"></script>
+    <script src="app/shared/directives/hangarSongsNavigation/hangarSongsNavigation.directive.js"></script>
+    <script src="app/shared/directives/hangarSongsHeader/hangarSongsHeader.directive.js"></script>
+    <script src="app/shared/directives/hangarSongsPlayer/hangarSongsPlayer.directive.js"></script>
+    <!-- MODELS -->
+    <script src="app/shared/models/spotifyMusic.model.js"></script>
+    <!-- FILTERS -->
+    <script src="app/shared/filters/audioUrl.filter.js"></script>
+    <script src="app/shared/filters/trackTimeStyle.filter.js"></script>
+</body>
+</html>

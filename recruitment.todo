@@ -1,0 +1,59 @@
+Hangar Recruitment Songs App
+Angular
+  ✔ Angular file structures @critical @done (09-09-16 22:00)
+  ✔ Angular module structures @critical @done (09-09-16 22:57)
+  ✔ Angular routess @critical @done (09-09-16 23:09)
+  ✔ Angular repo for jsons @critical @done (10-09-16 15:25)
+  ✔ Angular service for said repos @critical @done (10-09-16 15:25)
+
+General (Shared)
+  ✔ index.html @done (09-09-16 22:50)
+  ✔ Add fonts @done (10-09-16 09:16)
+  ✔ Header directive (desktop) @done (09-09-16 23:22)
+  ✔ Footer directive (desktop) @done (09-09-16 23:22)
+  ✔ Change content of header/footer @done (10-09-16 00:13)
+  ✔ Now Playing/Rate Songs buttons directive @critical @done (10-09-16 22:27)
+  ☐ mobile-friendly header @critical
+  ☐ mobile-friendly footer (and fix widths bug)  @critical
+
+Login Page
+  ✔ Login form template @done (10-09-16 10:42)
+  ✔ Social media icons/btns @done (10-09-16 12:53)
+  ✔ Form styles (visual only) @done (10-09-16 12:53)
+  ☐ Form styles (interactive ie: hovers, clicks, etc)
+  ☐ Form validations @critical
+      ✔ add placeholders @done (10-09-16 13:11)
+      ☐ both fields required for login @critical
+      ☐ highlight around empty field @high
+      ☐ db json to save login data? @low
+      ☐ error message when left empty? @high
+      ☐ error message when failed login? @high
+      ☐ social media login? @low
+      ☐ remember me auto-fill of email? password? @low
+
+Music List Page
+  ✔ Search box @done (10-09-16 19:53)
+  ✔ Search functionality (using ng-change) @done (10-09-16 19:54)
+  ✔ Music list container (using ng-repeat) @done (10-09-16 19:54)
+  ✔ Today/Friday radio button toggling logic @done (10-09-16 20:12)
+      ✔ songsModel to add this attribute to song object (won't do) @done (10-09-16 20:12)
+  ☐ Styling and responsiveness @critical
+  ☐ Song playing/selection transition to Now Playing page @high
+
+Now Playing Page
+  ✔ Use first song from list as default @critical @done (11-09-16 13:14)
+  ✔ Basic template @critical @done (10-09-16 23:41)
+  ☐ Styling and responsiveness @critical
+  ✔ Include images @critical @done (11-09-16 13:13)
+  ✔ Music reproduction @high @done (11-09-16 18:02)
+      ✔ spotify plugin? @high @done (11-09-16 13:14)
+      ✔ spotify api? @high @done (11-09-16 13:14)
+      ✔ html5 audio player? @low @done (11-09-16 18:02)
+  ✔ Filter time @high @done (11-09-16 19:22)
+  ✔ Custom progress bar @critical @done (11-09-16 19:22)
+  ☐ Make progress bar draggable @high
+
+Others
+  ☐ Change json music @low
+  ☐ 404 page? @low
+  ☐ Gulp minification? @low

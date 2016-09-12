@@ -1,0 +1,317 @@
+/* APP STYLES */
+@font-face {
+    font-family: 'DIN';
+    src: url('../../assets/fonts/DIN Medium.ttf');
+}
+body {
+    background-color: #1F2225;
+    font-family: 'DIN';
+    color: #FFFFFF;
+}
+
+/* UTILITY CLASSES */
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* HEADER DIRECTIVE */
+hangar-songs-header header {
+    margin-top: 15px;
+}
+hangar-songs-header header h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/* NAVIGATION DIRECTIVE */
+hangar-songs-navigation div.outer-navigation-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-top: 3px solid #4dc4d3;
+}
+hangar-songs-navigation div.inner-navigation-container {
+    width: 80%;
+    max-width: 900px;
+    margin: -10px auto 0 auto;
+}
+hangar-songs-navigation div.inner-navigation-container .navigation-btn {
+    background-color: #4dc4d3;
+    color: #374f52;
+    font-size: 11px;
+    padding: 10px 25px 5px 25px;
+    border-radius: 0 0 14px 15px;
+}
+hangar-songs-navigation div.inner-navigation-container .navigation-btn:hover,
+hangar-songs-navigation div.inner-navigation-container .navigation-btn:focus {
+    text-decoration: none;
+    color: #374f52;
+}
+hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-child {
+    margin-right: 15px;
+}
+
+/* LOGIN PAGE */
+.login-container .login-header {
+    margin-bottom: 30px;
+}
+.login-container .login-header h2 {
+    text-align: center;
+}
+.login-container .login-body {
+    margin: 0 auto;
+    max-width: 300px;
+}
+.login-container input[type=email],
+.login-container input[type=password] {
+    background-color: #636567;
+    border: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 5px 10px 20px;
+}
+.login-container .other-options {
+    margin-bottom: 20px;
+}
+.login-container .other-options label {
+    font-weight: normal;
+}
+.login-container .other-options .forget-password,
+.login-container .other-options .forget-password:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.login-container button.login-btn {
+    display: block;
+    width: 100%;
+    background-color: #4dc4d3;
+    border-radius: 10px;
+    border: 0;
+    padding: 5px 0;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.login-container button.login-btn:focus,
+.login-container button.login-btn:active {
+    outline: none;
+}
+.login-container .login-form-container {
+    margin-bottom: 15px;
+}
+.login-container .social-login-container {
+    text-align: center;
+}
+.login-container .social-login-container .social-icons-container {
+    display: inline-block;
+}
+.login-container .social-login-container .social-login-icon {
+    height: 60px;
+    width: 60px;
+    float: left;
+    border-radius: 30px;
+    margin: 10px;
+}
+.login-container .social-login-container .social-login-icon.twitter-container {
+    background-color: #1ebdef;
+}
+.login-container .social-login-container .social-login-icon.facebook-container {
+    background-color: #3b5a99;
+}
+.login-container .social-login-container .social-login-icon i {
+    line-height: 60px;
+}
+
+/* MUSIC LIST PAGE */
+.music-list-container {
+    max-width: 450px;
+    margin: 30px auto 0 auto;
+}
+.music-list-container .search-container {
+    position: relative;
+}
+.music-list-container .music-search {
+    width: 100%;
+    background-color: #35383c;
+    color: #acadae;
+    border: 0;
+    padding: 10px 50px 10px 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.music-list-container .music-search:focus,
+.music-list-container .music-search:active {
+    outline: none;
+}
+.music-list-container .search-container .music-search-icon {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+.music-list-container .song-container {
+    padding: 12px 10px;
+    margin-bottom: 2px;
+}
+.music-list-container .song-container.odd {
+    background-color: #8f9192;
+}
+.music-list-container .song-container.even {
+    background-color: #636567;
+}
+.music-list-container .song-container .play-btn {
+    padding: 8px 9.5px;
+    border: 1px solid #fff;
+}
+.music-list-container .song-container .song-info-container {
+    display: inline-block;
+    margin-left: 5px;
+}
+.music-list-container .song-container .song-info-container .song-name {
+    display: block;
+    font-weight: bold;
+    font-size: 11px;
+}
+.music-list-container .song-container .song-info-container .artist-name {
+    display: block;
+    font-size: 10px;
+}
+.music-list-container .song-container .date-btn-container {
+    display: inline-block;
+}
+.music-list-container .song-container .date-btn-container button {
+    background-color: #53d0e0;
+    color: #333;
+    border: 1px solid #47aebb;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+.music-list-container .song-container .date-btn-container button:focus,
+.music-list-container .song-container .date-btn-container button:active {
+    outline: none;
+}
+.music-list-container .song-container .date-btn-container button.active {
+    background-color: #4bbac8;
+    border-color: #689fa6;
+}
+.music-list-container .song-container .date-btn-container button.today-btn {
+    border-radius: 5px 0 0 5px;
+    margin-right: -4px;
+}
+.music-list-container .song-container .date-btn-container button.friday-btn {
+    border-radius: 0 5px 5px 0;
+}
+
+/* NOW PLAYING PAGE */
+.now-playing-container {
+    max-width: 350px;
+    margin: 30px auto 0 auto;
+}
+.now-playing-container .album-cover-container {
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+}
+.now-playing-container .album-cover-container img {
+    width: 100%;
+    height: 100%;
+}
+.now-playing-container .player-container {
+    margin: 15px 0 10px 0;
+}
+.now-playing-container .player-container .progress-bar-container {
+    height: 15px;
+    position: relative;
+}
+.now-playing-container .player-container .progress-bar-container .empty-audio-progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #6f7172;
+    border-radius: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    /*padding: 0 7px;*/
+    box-sizing: border-box;
+    /*left: 7px;*/
+}
+.now-playing-container .player-container .progress-bar-container .filled-audio-progress-bar {
+    background-color: #4dc4d3;
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    position: inherit;
+}
+.now-playing-container .player-container .progress-bar-container .audio-draggable-thumb {
+    position: absolute;
+    left: 0;
+    background-color: #4dc4d3;
+    height: 15px;
+    width: 15px;
+    border-radius: 8px;
+    transform: translateX(-50%);
+}
+.now-playing-container .player-btn-container {
+    position: relative;
+    margin-top: 30px;
+    padding: 0 50px;
+}
+.now-playing-container .song-info {
+    text-align: center;
+    margin-top: 15px;
+    height: 70px;
+}
+.now-playing-container .song-info span {
+    display: block;
+}
+.now-playing-container .song-info span.song-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.now-playing-container .player-btn-container i {
+    padding: 17px 0;
+}
+.now-playing-container .player-btn-container i.deactivated {
+    color: #aaa;
+    opacity: 0.8;
+}
+.now-playing-container .player-btn-container .play-btn {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    border: 2px solid #fff;
+    padding: 15px 19.5px;
+}
+.now-playing-container .player-btn-container .next-btn {
+    float: right;
+}
+
+/* FOOTER DIRECTIVE */
+hangar-songs-footer footer {
+    background-color: #1E2024;
+    color: #DEDEDE;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    /*padding: 15px;*/
+    border-top: 2px solid #0F1112;
+}
+hangar-songs-footer footer .inter-footer-container {
+    width: 80%;
+    max-width: 900px;
+}
+hangar-songs-footer footer div.copyright-container,
+hangar-songs-footer footer div.contact-container {
+    display: inline-block;
+}
+hangar-songs-footer footer a {
+    color: #DEDEDE;
+    text-decoration: none;
+}
+hangar-songs-footer footer a:hover {
+    /* give it a darker color */
+    color: #DEDEDE;
+    text-decoration: none;
+}

@@ -1,0 +1,31 @@
+<div class="login-container">
+    <div class="login-header">
+        <h2>LOGIN</h2>
+    </div>
+
+    <div class="login-body">
+        <div class="login-form-container">
+            <input type="email" class="loginTextInput" 
+                placeholder="{{loginCtrl.loginInfo.username ? loginCtrl.loginInfo.username : 'Email'}}">
+            <input type="password" class="loginTextInput" 
+                placeholder="{{loginCtrl.loginInfo.password ? loginCtrl.loginInfo.password : 'Password'}}">
+            <div class="other-options">
+                <input type="checkbox" name="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+                <a class="forget-password pull-right" href="">Forgot Password?</a>
+            </div>
+            <button class="login-btn">LOGIN</button>
+        </div>
+        <div class="social-login-container">
+            <p>Or sign in with a social account</p>
+            <div class="social-icons-container">
+                <div class="social-login-icon twitter-container">
+                    <i class="fa fa-3x fa-twitter"></i>
+                </div>
+                <div class="social-login-icon facebook-container">
+                    <i class="fa fa-3x fa-facebook"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

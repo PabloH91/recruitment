@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/hangarcr/recruitment#readme",
   "dependencies": {
+    "angular-spotify": "^1.4.1",
     "json-server": "^0.7.27"
   }
 }
