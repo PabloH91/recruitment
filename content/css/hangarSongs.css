@@ -46,10 +46,19 @@ hangar-songs-navigation div.outer-navigation-container {
     border-top: 3px solid #4dc4d3;
     z-index: 1;
 }
-hangar-songs-navigation div.inner-navigation-container {
+hangar-songs-navigation div.inner-navigation-container.larger-reso {
     width: 80%;
     max-width: 900px;
     margin: -10px auto 0 auto;
+}
+hangar-songs-navigation div.inner-navigation-container.smaller-reso {
+    text-align: center;
+}
+hangar-songs-navigation div.inner-navigation-container.smaller-reso .navigation-btn:first-child {
+    margin-right: 15px;
+}
+hangar-songs-navigation div.inner-navigation-container.smaller-reso .navigation-btn:last-child {
+    margin-left: 15px;
 }
 hangar-songs-navigation div.inner-navigation-container .navigation-btn {
     background-color: #4dc4d3;
@@ -63,7 +72,7 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:focus {
     text-decoration: none;
     color: #374f52;
 }
-hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-child {
+hangar-songs-navigation div.inner-navigation-container.larger-reso .navigation-btn:last-child {
     margin-right: 15px;
 }
 
@@ -86,6 +95,10 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-chil
     margin-bottom: 20px;
     padding: 10px 5px 10px 20px;
 }
+.login-container input[type=email].invalid-input,
+.login-container input[type=password].invalid-input {
+    border: 2px solid #a11d2b;
+}
 .login-container .other-options {
     margin-bottom: 20px;
 }
@@ -97,7 +110,7 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-chil
     color: #FFFFFF;
     text-decoration: none;
 }
-.login-container button.login-btn {
+.login-container .login-btn {
     display: block;
     width: 100%;
     background-color: #4dc4d3;
@@ -107,8 +120,8 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-chil
     font-size: 20px;
     border-radius: 20px;
 }
-.login-container button.login-btn:focus,
-.login-container button.login-btn:active {
+.login-container .login-btn:focus,
+.login-container .login-btn:active {
     outline: none;
 }
 .login-container .login-form-container {
@@ -231,17 +244,15 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-chil
 
 /* NOW PLAYING PAGE */
 .now-playing-container {
-    max-width: 350px;
-    margin: 30px auto 0 auto;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px auto 0 auto;
 }
 .now-playing-container .album-cover-container {
-    height: 350px;
-    width: 350px;
     margin: 0 auto;
 }
 .now-playing-container .album-cover-container img {
     width: 100%;
-    height: 100%;
 }
 .now-playing-container .player-container {
     margin: 15px 0 10px 0;
@@ -258,9 +269,7 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-chil
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
-    /*padding: 0 7px;*/
     box-sizing: border-box;
-    /*left: 7px;*/
 }
 .now-playing-container .player-container .progress-bar-container .filled-audio-progress-bar {
     background-color: #4dc4d3;
@@ -281,7 +290,7 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-chil
 .now-playing-container .player-btn-container {
     position: relative;
     margin-top: 30px;
-    padding: 0 50px;
+    padding: 0 10%;
 }
 .now-playing-container .song-info {
     text-align: center;
@@ -316,13 +325,15 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-chil
 /* FOOTER DIRECTIVE */
 hangar-songs-footer footer {
     background-color: #1E2024;
+    background-image: url("../img/darth_stripe.png");
+    background-repeat: repeat;
     color: #DEDEDE;
     height: 150px;
     position: fixed;
     bottom: 0;
     overflow: hidden;
     width: 100%;
-    border-top: 2px solid #0F1112;
+    border-top: 3px solid #0F1112;
 }
 hangar-songs-footer footer .centered {
     text-align: center;
@@ -330,6 +341,8 @@ hangar-songs-footer footer .centered {
 hangar-songs-footer footer .inter-footer-container {
     width: 80%;
     max-width: 900px;
+    position: relative;
+    top: 30%;
 }
 hangar-songs-footer footer div.copyright-container,
 hangar-songs-footer footer div.contact-container {

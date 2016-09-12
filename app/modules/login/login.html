@@ -4,18 +4,20 @@
     </div>
 
     <div class="login-body">
-        <div class="login-form-container">
-            <input type="email" class="loginTextInput" 
-                placeholder="{{loginCtrl.loginInfo.username ? loginCtrl.loginInfo.username : 'Email'}}">
-            <input type="password" class="loginTextInput" 
-                placeholder="{{loginCtrl.loginInfo.password ? loginCtrl.loginInfo.password : 'Password'}}">
+        <form class="login-form-container" ng-submit="loginCtrl.attemptLogin()">
+            <input type="email" class="loginTextInput" placeholder="Email" 
+                data-ng-model="loginCtrl.loginInfo.username" 
+                data-ng-class="{'invalid-input': !loginCtrl.emailPassed}" required>
+            <input type="password" class="loginTextInput" placeholder="Password" 
+                data-ng-model="loginCtrl.loginInfo.password" 
+                data-ng-class="{'invalid-input': !loginCtrl.passwordPassed}" required>
             <div class="other-options">
                 <input type="checkbox" name="rememberMe">
                 <label for="rememberMe">Remember Me</label>
                 <a class="forget-password pull-right" href="">Forgot Password?</a>
             </div>
-            <button class="login-btn">LOGIN</button>
-        </div>
+            <input type="submit" class="login-btn" value="LOGIN" />
+        </form>
         <div class="social-login-container">
             <p>Or sign in with a social account</p>
             <div class="social-icons-container">

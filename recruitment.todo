@@ -23,11 +23,13 @@ Login Page
   ☐ Form styles (interactive ie: hovers, clicks, etc)
   ☐ Form validations @critical
       ✔ add placeholders @done (10-09-16 13:11)
-      ☐ both fields required for login @critical
-      ☐ highlight around empty field @high
-      ☐ db json to save login data? @low
-      ☐ error message when left empty? @high
+      ✔ both fields required for login @critical @done (11-09-16 23:32)
+      ✔ password regex @critical @done (12-09-16 00:28)
+      ✔ email regex @critical @done (12-09-16 00:28)
+      ✔ highlight around empty field @high @done (12-09-16 00:28)
+      ✔ error message when left empty? @high @done (11-09-16 23:32)
       ☐ error message when failed login? @high
+      ☐ db json to save login data? @low
       ☐ social media login? @low
       ☐ remember me auto-fill of email? password? @low
 
@@ -43,7 +45,7 @@ Music List Page
 Now Playing Page
   ✔ Use first song from list as default @critical @done (11-09-16 13:14)
   ✔ Basic template @critical @done (10-09-16 23:41)
-  ☐ Styling and responsiveness @critical
+  ✔ Styling and responsiveness @critical @done (12-09-16 01:02)
   ✔ Include images @critical @done (11-09-16 13:13)
   ✔ Music reproduction @high @done (11-09-16 18:02)
       ✔ spotify plugin? @high @done (11-09-16 13:14)
@@ -54,6 +56,7 @@ Now Playing Page
   ☐ Make progress bar draggable @high
 
 Others
+  ☐ Comment code @high
   ✔ Change json music @low @done (11-09-16 21:42)
   ☐ 404 page? @low
   ☐ Gulp minification? @low

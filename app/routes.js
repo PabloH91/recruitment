@@ -6,15 +6,15 @@
 
     function configFn($routeProvider) {
         $routeProvider
-            .when('/', {
+            .when('/login', {
                 templateUrl: ('app/modules/login/login.html'),
                 controller: 'login.controller',
                 controllerAs: 'loginCtrl'
             })
-            .when('/music', {
-                templateUrl: ('app/modules/musicList/musicList.html'),
-                controller: 'musicList.controller',
-                controllerAs: 'musicListCtrl'
+            .when('/', {
+                templateUrl: ('app/modules/login/login.html'),
+                controller: 'login.controller',
+                controllerAs: 'loginCtrl'
             })
             .when('/nowPlaying', {
                 templateUrl: ('app/modules/nowPlaying/nowPlaying.html'),
@@ -22,7 +22,9 @@
                 controllerAs: 'nowPlayingCtrl'
             })
             .otherwise({
-                templateUrl: ('app/shared/views/404.html')
+                templateUrl: ('app/modules/musicList/musicList.html'),
+                controller: 'musicList.controller',
+                controllerAs: 'musicListCtrl'
             });
     }
 }());
