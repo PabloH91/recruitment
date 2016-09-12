@@ -3,10 +3,20 @@
     font-family: 'DIN';
     src: url('../../assets/fonts/DIN Medium.ttf');
 }
+* {
+  margin: 0;
+}
+html, body {
+    height: 100%;
+}
 body {
     background-color: #1F2225;
     font-family: 'DIN';
     color: #FFFFFF;
+}
+.scrollable-area {
+    height: calc( 100% - 150px );
+    overflow-y: auto;
 }
 
 /* UTILITY CLASSES */
@@ -16,12 +26,13 @@ body {
 
 /* HEADER DIRECTIVE */
 hangar-songs-header header {
-    margin-top: 15px;
+    /*margin-top: 15px;*/
 }
 hangar-songs-header header h1 {
     text-align: center;
     font-weight: bold;
     font-size: 50px;
+    margin-top: 30px;
 }
 
 /* NAVIGATION DIRECTIVE */
@@ -30,6 +41,7 @@ hangar-songs-navigation div.outer-navigation-container {
     top: 0;
     width: 100%;
     border-top: 3px solid #4dc4d3;
+    z-index: 1;
 }
 hangar-songs-navigation div.inner-navigation-container {
     width: 80%;
@@ -124,8 +136,9 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-chil
 
 /* MUSIC LIST PAGE */
 .music-list-container {
-    max-width: 450px;
-    margin: 30px auto 0 auto;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto 0 auto;
 }
 .music-list-container .search-container {
     position: relative;
@@ -164,17 +177,28 @@ hangar-songs-navigation div.inner-navigation-container .navigation-btn:last-chil
     border: 1px solid #fff;
 }
 .music-list-container .song-container .song-info-container {
+    position: relative;
     display: inline-block;
     margin-left: 5px;
+    width: calc( 100% - 187px );
+    height: 32px;
 }
 .music-list-container .song-container .song-info-container .song-name {
+    position: absolute;
+    top: 0;
     display: block;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
 }
 .music-list-container .song-container .song-info-container .artist-name {
+    position: absolute;
+    bottom: 0;
     display: block;
-    font-size: 10px;
+    font-size: 11px;
 }
 .music-list-container .song-container .date-btn-container {
     display: inline-block;
@@ -291,11 +315,10 @@ hangar-songs-footer footer {
     background-color: #1E2024;
     color: #DEDEDE;
     height: 150px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     overflow: hidden;
     width: 100%;
-    /*padding: 15px;*/
     border-top: 2px solid #0F1112;
 }
 hangar-songs-footer footer .inter-footer-container {

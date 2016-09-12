@@ -37,7 +37,7 @@ Music List Page
   ✔ Music list container (using ng-repeat) @done (10-09-16 19:54)
   ✔ Today/Friday radio button toggling logic @done (10-09-16 20:12)
       ✔ songsModel to add this attribute to song object (won't do) @done (10-09-16 20:12)
-  ☐ Styling and responsiveness @critical
+  ✔ Styling and responsiveness @critical @done (11-09-16 21:20)
   ☐ Song playing/selection transition to Now Playing page @high
 
 Now Playing Page
