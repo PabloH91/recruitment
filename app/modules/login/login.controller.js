@@ -27,20 +27,21 @@
         vm.passwordPassed = true;
 
         // Declaration of private functions
-        function _init() {
-        }
-        _init();
 
         // Declaration of public functions
+        /**
+         * attemptLogin
+         * Compares email and password inputs with their respective regex values.
+         * Updates values of vm.emailPassed and vm.passwordPassed.
+         */
         function attemptLogin() {
             vm.emailPassed = emailRegex.test(vm.loginInfo.username);
             vm.passwordPassed = passRegex.test(vm.loginInfo.password);
             if (vm.emailPassed && vm.passwordPassed) {
                 // redirect
                 $location.path('/music')
-            } else {
-                // stay in same page
             }
+            // else, stay in same page
         }
     }
 }());

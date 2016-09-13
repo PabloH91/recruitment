@@ -14,15 +14,20 @@
         };
 
         function postLink(scope, iElement, iAttrs) {
-            // scope.width = $window.innerWidth;
+            // DOM-Element variables
             var containerElem = iElement.find('div.container');
             var copyrightElem = iElement.find('div.copyright-container');
             var contactElem = iElement.find('div.contact-container');
-
+            // Width of DOM Elements
             var containerElemWidth = containerElem.width();
             var copyrightElemWidth = copyrightElem.width();
             var contactElemWidth = contactElem.width();
 
+            /**
+             * _checkFooterWidth
+             * Checks if both elements fit in current footer container.
+             * Toggles appropriate classes on DOM elements.
+             */
             function _checkFooterWidth() {
                 if (containerElemWidth < copyrightElemWidth + contactElemWidth) {
                     copyrightElem.removeClass('pull-left');
@@ -36,6 +41,8 @@
             }
             _checkFooterWidth();
 
+            // watches resizing of window to trigger _checkFooterWidth with
+            // updated width values.
             angular.element($window).bind('resize', function () {
                 containerElemWidth = containerElem.width();
                 copyrightElemWidth = copyrightElem.width();

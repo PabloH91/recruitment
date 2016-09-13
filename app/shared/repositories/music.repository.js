@@ -13,6 +13,7 @@
         };
         return repo;
 
+        // gets default songs json
         function getMusicList() {
             return $http({
                 method: 'GET',
@@ -23,6 +24,7 @@
                 }
             });
         }
+        // gets custom songs json
         function getPersonalMusicList() {
             return $http({
                 method: 'GET',

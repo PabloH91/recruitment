@@ -10,11 +10,6 @@
         return {
             restrict: 'E',
             templateUrl: 'app/shared/directives/hangarSongsNavigation/hangarSongsNavigation.template.html',
-            link: postLink
         };
-
-        function postLink(scope, iElement, iAttrs) {
-            scope.currentYear = new Date().getFullYear();
-        }
     }
 }());

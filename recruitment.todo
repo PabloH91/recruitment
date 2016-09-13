@@ -54,9 +54,10 @@ Now Playing Page
   ✔ Filter time @high @done (11-09-16 19:22)
   ✔ Custom progress bar @critical @done (11-09-16 19:22)
   ☐ Make progress bar draggable @high
+  ☐ multiple-audios bug
 
 Others
-  ☐ Comment code @high
+  ✔ Comment code @high @done (12-09-16 22:43)
   ✔ Change json music @low @done (11-09-16 21:42)
   ☐ 404 page? @low
   ☐ Gulp minification? @low

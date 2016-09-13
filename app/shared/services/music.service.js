@@ -19,6 +19,11 @@
         };
         return service;
 
+        /**
+         * getMusicList
+         * Requests default music list from repository. Updates serviceData.musicList
+         * with response data.
+         */
         function getMusicList() {
             musicRepository.getMusicList().then(onSuccess, onError);
 
@@ -32,6 +37,11 @@
             }
         }
 
+        /**
+         * getPersonalMusicList
+         * Requests custom music list from repository. Updates serviceData.personalMusicList
+         * with response data.
+         */
         function getPersonalMusicList() {
             return musicRepository.getPersonalMusicList().then(onSuccess, onError);
 

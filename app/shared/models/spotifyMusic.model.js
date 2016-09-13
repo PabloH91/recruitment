@@ -12,6 +12,11 @@
         };
         return model;
 
+        /**
+         * getArrayOfIds
+         * @param  {[Array]} listOfIds, takes array of spotify Id Objects
+         * @return {[Array]} array of strings (ids)
+         */
         function getArrayOfIds(listOfIds) {
             var arrayOfIds = [],
                 i;

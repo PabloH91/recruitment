@@ -17,6 +17,11 @@
         vm.arrayOfSongObjs = [];
 
         // Declaration of private functions
+        /**
+         * _init
+         * Requests song data through musicService and spotifyService services.
+         * Updates the values of vm.arrayOfSongIds and vm.arrayOfSongObjs.
+         */
         function _init() {
             musicService.getPersonalMusicList().then(function () {
                 vm.arrayOfSongIds = spotifyMusicModel.getArrayOfIds(vm.musicServiceData.personalMusicList);

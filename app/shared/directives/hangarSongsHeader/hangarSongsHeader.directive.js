@@ -14,6 +14,7 @@
         };
 
         function postLink(scope, iElement, iAttrs) {
+            // gets current year for copyright display
             scope.currentYear = new Date().getFullYear();
         }
     }
