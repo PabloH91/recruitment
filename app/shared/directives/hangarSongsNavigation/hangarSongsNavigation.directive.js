@@ -9,7 +9,7 @@
     function hangarSongsNavigationDirective() {
         return {
             restrict: 'E',
-            templateUrl: 'app/shared/directives/hangarSongsNavigation/hangarSongsNavigation.template.html',
+            templateUrl: 'app/shared/directives/hangarSongsNavigation/hangarSongsNavigation.template.html'
         };
     }
 }());

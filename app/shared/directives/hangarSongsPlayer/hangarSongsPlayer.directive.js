@@ -4,9 +4,9 @@
     angular.module('hangarSongs.directives')
         .directive('hangarSongsPlayer', hangarSongsPlayerDirective);
 
-    hangarSongsPlayerDirective.$inject = ['ngAudio'];
+    hangarSongsPlayerDirective.$inject = ['$rootScope', 'ngAudio'];
 
-    function hangarSongsPlayerDirective(ngAudio) {
+    function hangarSongsPlayerDirective($rootScope, ngAudio) {
         return {
             restrict: 'E',
             scope: {
@@ -18,8 +18,14 @@
 
         function postLink(scope, iElement, iAttrs) {
             // exposing public functions
+            scope.isPaused = isPaused;
+            scope.playAudio = playAudio;
+            scope.pauseAudio = pauseAudio;
+            scope.getProgress = getProgress;
             scope.prevSong = prevSong;
             scope.nextSong = nextSong;
+            scope.getCurrentTime = getCurrentTime;
+            scope.getRemainingTime = getRemainingTime;
             scope.getAlbumCover = getAlbumCover;
 
             // public variables
@@ -36,15 +42,15 @@
              * Checks if there's an ngAudio object in the scope to stop previous audio.
              */
             function _changeAudioElement() {
-                if (scope.currentSong) {
-                    scope.currentSong.stop();
+                if ($rootScope.currentSong) {
+                    $rootScope.currentSong.stop();
                 }
-                scope.currentSong = ngAudio.load(scope.songsList[scope.currentSongPosition.position].preview_url);
-                scope.currentSong.play(); // auto-play
+                $rootScope.currentSong = ngAudio.load(scope.songsList[scope.currentSongPosition.position].preview_url);
+                $rootScope.currentSong.play(); // auto-play
             }
             /**
              * _checkSongPositioning
-             * Checks if the current song is the first or last and updtes 
+             * Checks if the current song is the first or last and updates
              * scope.currentSongPosition accordingly.
              */
             function _checkSongPositioning() {
@@ -53,6 +59,36 @@
             }
 
             // declaration of public functions
+            /**
+             * isPaused
+             * Returns whether there is a currentSong object found and it has the
+             * paused attribute set to true.
+             * @return {Boolean} 
+             */
+            function isPaused() {
+                return $rootScope.currentSong && $rootScope.currentSong.paused;
+            }
+
+            /**
+             * playAudio
+             * Calls play function from current song in $rootScope.
+             */
+            function playAudio() {
+                if (angular.isDefined($rootScope.currentSong)) {
+                    $rootScope.currentSong.play();
+                }
+            }
+
+            /**
+             * pauseAudio
+             * Calls pause function from current song in $rootScope.
+             */
+            function pauseAudio() {
+                if (angular.isDefined($rootScope.currentSong)) {
+                    $rootScope.currentSong.pause();
+                }
+            }
+
             /**
              * prevSong
              * Moves to previous song.
@@ -78,10 +114,43 @@
             }
 
             /**
+             * getProgress
+             * Returns the progress (value between 0 and 1) of the current song.
+             * @return {Number}
+             */
+            function getProgress() {
+                if (angular.isDefined($rootScope.currentSong)) {
+                    return $rootScope.currentSong.progress;
+                }
+            }
+
+            /**
+             * getCurrentTime
+             * Returns the time of the current song in seconds.
+             * @return {Number}
+             */
+            function getCurrentTime() {
+                if (angular.isDefined($rootScope.currentSong)) {
+                    return $rootScope.currentSong.currentTime;
+                }
+            }
+
+            /**
+             * getRemainingTime
+             * Returns remaining time (before end of song) of current song in seconds.
+             * @return {Number}
+             */
+            function getRemainingTime() {
+                if (angular.isDefined($rootScope.currentSong)) {
+                    return $rootScope.currentSong.remaining;
+                }
+            }
+
+            /**
              * getAlbumCover
              * Checks the array of images the spotifyService returns and tries to find 
              * a 300x300 image. If not found, picks first one (largest size available).
-             * @return {[String]} url to best-sized image
+             * @return {String} url to best-sized image
              */
             function getAlbumCover() {
                 var i;
@@ -99,9 +168,12 @@
             // watches for changes to scope.songsList to know to check song position
             // and update audio first time loading the songsList.
             scope.$watch('songsList', function (newVal) {
+                // check there isn't music currently playing
                 if (newVal.length > 0) {
                     _checkSongPositioning();
-                    _changeAudioElement();
+                    if (!$rootScope.currentSong) {
+                        _changeAudioElement();
+                    }
                 }
             });
         }

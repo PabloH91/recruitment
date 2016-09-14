@@ -1,14 +1,14 @@
 {
   "name": "recruitment",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "hangar recruitment test app",
-  "main": "index.js",
+  "main": "app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hangarcr/recruitment.git"
+    "url": "git+https://github.com/PabloH91/recruitment.git"
   },
   "keywords": [
     "test",
@@ -18,14 +18,19 @@
     "mobile",
     "app"
   ],
-  "author": "jgatjens@gmail.com",
+  "author": "hernandez.pah91@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hangarcr/recruitment/issues"
   },
-  "homepage": "https://github.com/hangarcr/recruitment#readme",
+  "homepage": "https://github.com/PabloH91/recruitment#readme",
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
     "angular-spotify": "^1.4.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.0",
     "json-server": "^0.7.27"
   }
 }

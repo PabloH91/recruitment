@@ -7,15 +7,15 @@
     <div class="progress-bar-container">
         <div class="empty-audio-progress-bar">
             <div class="filled-audio-progress-bar"
-                data-ng-style="{'width': (currentSong.progress * 100) + '%'}"></div>
+                data-ng-style="{'width': (getProgress() * 100) + '%'}"></div>
         </div>
         <div class="audio-draggable-thumb"
-             data-ng-style="{'left': (currentSong.progress * 100) + '%'}"></div>
+             data-ng-style="{'left': (getProgress() * 100) + '%'}"></div>
     </div>
 </div>
 <div class="time-tracking-container">
-    <span>{{currentSong.currentTime | trackTimeStyle }}</span>
-    <span class="pull-right">-{{currentSong.remaining | trackTimeStyle }}</span>
+    <span>{{getCurrentTime() | trackTimeStyle }}</span>
+    <span class="pull-right">-{{getRemainingTime() | trackTimeStyle }}</span>
 </div>
 <div class="song-info">
     <span class="song-name">{{songsList[currentSongPosition.position].name}}</span>
@@ -27,8 +27,8 @@
         data-ng-disabled="currentSongPosition.isFirst"
         data-ng-class="{'deactivated': currentSongPosition.isFirst}"></i>
     <i class="fa fa-3x play-btn fa-play"
-        data-ng-click="currentSong.paused ? currentSong.play() : currentSong.pause()"
-        data-ng-class="{'fa-play': currentSong.paused, 'fa-pause': !currentSong.paused}"></i>
+        data-ng-click="isPaused() ? playAudio() : pauseAudio()"
+        data-ng-class="{'fa-play': isPaused(), 'fa-pause': !isPaused()}"></i>
     <i class="fa fa-3x fa-step-forward next-btn"
         data-ng-click="currentSongPosition.isLast || nextSong();"
         data-ng-disabled="currentSongPosition.isLast"
